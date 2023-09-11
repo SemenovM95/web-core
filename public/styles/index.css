@@ -325,6 +325,7 @@ h3 {
 .services__link {
   display: inline-block;
   padding: 8px 16px;
+  color: inherit;
 }
 
 @media screen and (min-width: 767px) {
