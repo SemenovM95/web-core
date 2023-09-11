@@ -1,0 +1,38 @@
+@use "/styles/misc/reset.css";
+
+@import "/styles/misc/colors";
+@import "/styles/misc/_vars.scss";
+@import "/styles/misc/typography.scss";
+@import "/styles/blocks/_blocks.scss";
+
+html {
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.visually-hidden {
+    position: absolute!important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@media screen and (max-width: $widthTablet) {
+    .--mobile-hidden {
+        display: none;
+    }
+}
+
+@media screen and (min-width: $widthDesktop) {
+    .--desktop-hidden {
+        display: none;
+    } 
+}

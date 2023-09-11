@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "TT Lakes";
+    src: url(../assets/fonts/TTLakes-Regular.woff) format("woff");   
+    font-display: swap;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "TT Lakes";
+    src: url(../assets/fonts/TTLakes-DemiBold.woff) format("woff");   
+    font-display: swap;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "TT Lakes";
+    src: url(../assets/fonts/TTLakes-Bold.woff) format("woff");   
+    font-display: swap;
+    font-weight: 700;
+}
+
+html {
+    font-family: "TT Lakes";
+}
+
+.text {
+    color: inherit;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    &--bold {
+        font-weight: 500;
+    }
+    &--md {
+        font-size: 1.15em;
+        line-height: 1.2em;
+    }
+
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}

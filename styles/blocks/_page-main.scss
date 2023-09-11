@@ -1,0 +1,10 @@
+.page-main {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    background-color: $colorBackgroundMain;
+    &--center {
+        padding-left: calc((100vw - $widthDesktop) / 2);
+        padding-right: calc((100vw - $widthDesktop) / 2);
+    }
+}

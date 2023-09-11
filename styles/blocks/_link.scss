@@ -1,0 +1,8 @@
+.link {
+    &:visited {
+        color: inherit;
+    }
+    &:focus {
+        outline-color: black;
+    }
+}
