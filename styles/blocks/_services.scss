@@ -16,7 +16,7 @@
     &__list {
         position: relative;
         display: flex;
-        column-gap: 8px;
+        gap: 8px;
         align-items: baseline;
         padding: 24px 16px;
         overflow-x: scroll;
@@ -87,7 +87,11 @@
         }
         &__list {
             padding: 8px 32px;
-            overflow-x: auto;
+            overflow: hidden;
+            flex-wrap: wrap;
+        }
+        &__link {
+            padding: 8px 22px;
         }
     }
 }

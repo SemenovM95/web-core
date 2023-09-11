@@ -277,8 +277,7 @@ h3 {
 .services__list {
   position: relative;
   display: flex;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  gap: 8px;
   align-items: baseline;
   padding: 24px 16px;
   overflow-x: scroll;
@@ -342,7 +341,11 @@ h3 {
   }
   .services__list {
     padding: 8px 32px;
-    overflow-x: auto;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  .services__link {
+    padding: 8px 22px;
   }
 }
 .about-us {
