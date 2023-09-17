@@ -36,3 +36,9 @@ html {
         display: none;
     } 
 }
+
+@media screen and (max-width: $widthDesktop) {
+    .--desktop-only {
+        display: none;
+    } 
+}

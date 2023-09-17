@@ -1,7 +1,9 @@
 .services {
-    &__heading {
-        position: relative;
-        padding-left: 16px;
+    &__controls {
+        position:relative;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
         &::before {
             content: "";
             position: absolute;
@@ -12,6 +14,14 @@
             border-top-right-radius: 4px;
             border-bottom-right-radius: 4px;
         }
+    }
+    &__heading {
+        position: relative;
+        margin-right: auto;
+    }
+    &__quick-menu {
+        display: flex;
+        gap: 32px;    
     }
     &__list {
         position: relative;
@@ -72,8 +82,8 @@
 
 @media screen and (min-width: $widthTablet) {
     .services {
-        &__heading {
-            padding-left: 24px;
+        &__controls {
+            padding: 0 24px;
         }
         &__list {
             padding: 32px 24px;
@@ -83,8 +93,8 @@
 
 @media screen and (min-width: $widthDesktop) {
     .services {
-        &__heading {
-            padding-left: 32px;
+        &__controls {
+            padding: 0 32px;
         }
         &__list {
             padding: 8px 32px;

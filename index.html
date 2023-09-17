@@ -55,7 +55,23 @@
             CPS – Сервис по ремотну техники и электроники
         </h1>
         <section class="services">
-            <h2 class="services__heading">Услуги и сервисы</h2>
+            <div class="services__controls">
+                <h2 class="services__heading">Услуги и сервисы</h2>
+                <ul class="services__quick-menu quick-menu --desktop-only">
+                    <li class="quick-menu__item">
+                        <button class="quick-menu__button button button--hover-bg" type="button" aria-label="Заказать ремонт">
+                            Оставить заявку
+                            <span class="button__icon button__icon--repair"></span>
+                        </button>
+                    </li>
+                    <li class="quick-menu__item">
+                        <button class="quick-menu__button button button--hover-bg" type="button" aria-label="Проверить статус ремонта">
+                            Статус ремонта
+                            <span class="button__icon button__icon--check"></span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
             <div class="services__wrapper">
                 <ul class="services__list">
                     <li class="services__item services__item--focused">
