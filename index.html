@@ -11,7 +11,9 @@
 <body class="page">
     <header class="header --desktop-hidden">
         <nav class="header__menu menu">
-            <button class="menu__button button button--icon button--icon--menu button--hover-bg" type="button" aria-label="Открыть меню"></button>
+            <button class="menu__button button button--hover-bg" type="button" aria-label="Открыть меню">
+                <span class="button__icon button__icon--menu"></span>
+            </button>
         </nav>
         <div class="header__divider divider --mobile-hidden"></div>
         <a href="#" class="header__link link header__link--logo">
@@ -19,22 +21,32 @@
         </a>
         <ul class="header__user-menu user-menu --mobile-hidden">
             <li class="controls__item">
-                <button class="user-menu__button button button--icon button--icon--phone button--hover-bg" type="button" aria-label="Заказать звонок"></button>
+                <button class="user-menu__button button button--hover-bg" type="button" aria-label="Заказать звонок">
+                    <span class="button__icon button__icon--phone"></span>
+                </button>
             </li>
             <li class="controls-item">
-                <button class="user-menu__button button button--icon button--icon--chat button--hover-bg" type="button" aria-label="Написать нам в чате"></button>
+                <button class="user-menu__button button button--hover-bg" type="button" aria-label="Написать нам в чате">
+                    <span class="button__icon button__icon--chat"></span>
+                </button>
             </li>
             <li class="controls-item">
-                <button class="user-menu__button button button--icon button--icon--profile button--hover-bg" type="button" aria-label="Личный кабинет"></button>
+                <button class="user-menu__button button--hover-bg" type="button" aria-label="Личный кабинет">
+                    <span class="button button__icon button__icon--profile"></span>
+                </button>
             </li>
         </ul>
         <div class="header__divider divider"></div>
-        <ul class="header__quick-menu">
+        <ul class="header__quick-menu quick-menu">
             <li class="quick-menu__item">
-                <button class="quick-menu__button button button--icon button--icon--repair button--hover-bg" type="button" aria-label="Заказать ремонт"></button>
+                <button class="quick-menu__button button button--hover-bg" type="button" aria-label="Заказать ремонт">
+                    <span class="button__icon button__icon--repair"></span>
+                </button>
             </li>
             <li class="quick-menu__item">
-                <button class="quick-menu__button button button--icon button--icon--check button--hover-bg" type="button" aria-label="Проверить статус ремонта"></button>
+                <button class="quick-menu__button button button--hover-bg" type="button" aria-label="Проверить статус ремонта">
+                    <span class="button__icon button__icon--check"></span>
+                </button>
             </li>
         </ul>
     </header>

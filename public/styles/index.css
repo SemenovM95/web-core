@@ -116,7 +116,7 @@ html {
   letter-spacing: 0.2px;
 }
 .text--bold {
-  font-weight: 500;
+  font-weight: 600;
 }
 .text--md {
   font-size: 1.15em;
@@ -138,7 +138,17 @@ h3 {
   font-weight: 600;
 }
 
-.button--icon {
+.button {
+  font-size: 1.2rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.button__icon {
+  display: inline-block;
   width: 40px;
   height: 40px;
   flex-shrink: 0;
@@ -147,22 +157,22 @@ h3 {
   background-color: #FF3E79;
   border-radius: 50%;
 }
-.button--icon--menu {
+.button__icon--menu {
   background-image: url(../assets/svg/burger.svg);
 }
-.button--icon--chat {
+.button__icon--chat {
   background-image: url(../assets/svg/chat.svg);
 }
-.button--icon--check {
+.button__icon--check {
   background-image: url(../assets/svg/check-repair.svg);
 }
-.button--icon--phone {
+.button__icon--phone {
   background-image: url(../assets/svg/phone.svg);
 }
-.button--icon--profile {
+.button__icon--profile {
   background-image: url(../assets/svg/profile.svg);
 }
-.button--icon--repair {
+.button__icon--repair {
   background-image: url(../assets/svg/repair.svg);
 }
 .button:focus-visible {
@@ -171,7 +181,7 @@ h3 {
 .button:active {
   outline: none;
 }
-.button--hover-bg:hover {
+.button--hover-bg > span:hover {
   transition: background-color 0.15s;
   background-color: #ff719c;
 }
@@ -260,11 +270,13 @@ h3 {
   padding-right: calc((100vw - 1120px) / 2);
 }
 
-.services__heading {
+.services__controls {
   position: relative;
-  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
 }
-.services__heading::before {
+.services__controls::before {
   content: "";
   position: absolute;
   top: 0;
@@ -273,6 +285,14 @@ h3 {
   border: 2px solid #41F6D7;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+.services__heading {
+  position: relative;
+  margin-right: auto;
+}
+.services__quick-menu {
+  display: flex;
+  gap: 32px;
 }
 .services__list {
   position: relative;
@@ -329,16 +349,16 @@ h3 {
 }
 
 @media screen and (min-width: 767px) {
-  .services__heading {
-    padding-left: 24px;
+  .services__controls {
+    padding: 0 24px;
   }
   .services__list {
     padding: 32px 24px;
   }
 }
 @media screen and (min-width: 1120px) {
-  .services__heading {
-    padding-left: 32px;
+  .services__controls {
+    padding: 0 32px;
   }
   .services__list {
     padding: 8px 32px;
@@ -434,6 +454,11 @@ html {
 }
 @media screen and (min-width: 1120px) {
   .--desktop-hidden {
+    display: none;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .--desktop-only {
     display: none;
   }
 }/*# sourceMappingURL=index.css.map */
