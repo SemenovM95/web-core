@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     padding: 18px 16px;
-
+    border-bottom: 1px solid #D9FFF5;
     &__menu {
         margin-right: 16px;
     }
@@ -49,8 +49,6 @@
             margin-left: 20px;
         }
         &__user-menu {
-            display: flex;
-            column-gap: 16px;
             margin-right: 20px;
         }
         &__quick-menu {

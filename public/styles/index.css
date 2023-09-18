@@ -181,7 +181,7 @@ h3 {
 .button:active {
   outline: none;
 }
-.button--hover-bg > span:hover {
+.button--hover-bg:hover > span {
   transition: background-color 0.15s;
   background-color: #ff719c;
 }
@@ -204,6 +204,7 @@ h3 {
   align-items: center;
   width: 100%;
   padding: 18px 16px;
+  border-bottom: 1px solid #D9FFF5;
 }
 .header__menu {
   margin-right: 16px;
@@ -427,6 +428,17 @@ h3 {
     padding: 0 32px;
   }
 }
+.user-menu {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  align-items: center;
+}
+.user-menu__item {
+  height: -moz-max-content;
+  height: max-content;
+}
+
 html {
   box-sizing: border-box;
   font-size: 14px;

@@ -26,8 +26,8 @@
     &:active {
         outline: none;
     }
-    &--hover-bg > span {
-        &:hover {
+    &--hover-bg {
+        &:hover > span {
             transition: background-color 0.15s;
             background-color: lighten($color: $colorButtonMain, $amount: 10%);
         }
