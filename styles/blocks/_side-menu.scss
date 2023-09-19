@@ -144,3 +144,12 @@ body:has(.side-menu__button:active) .side-menu{
         width: 100vw;
     }
 }
+@media screen and (min-width: $widthDesktop) {
+    .side-menu {
+        &__content {
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}

@@ -578,6 +578,11 @@ body:has(.side-menu__button:active) .side-menu__backdrop {
     width: 100vw;
   }
 }
+@media screen and (min-width: 1120px) {
+  .side-menu__content::-webkit-scrollbar {
+    display: none;
+  }
+}
 .user-menu {
   display: flex;
   -moz-column-gap: 16px;
