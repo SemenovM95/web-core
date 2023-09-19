@@ -211,6 +211,9 @@ h3 {
   background-color: initial;
 }
 
+.link {
+  color: inherit;
+}
 .link:visited {
   color: inherit;
 }
