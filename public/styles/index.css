@@ -93,6 +93,12 @@ legend {
 }
 @font-face {
   font-family: "TT Lakes";
+  src: url(../assets/fonts/TTLakes-Medium.woff) format("woff");
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "TT Lakes";
   src: url(../assets/fonts/TTLakes-DemiBold.woff) format("woff");
   font-display: swap;
   font-weight: 600;
@@ -105,6 +111,7 @@ legend {
 }
 html {
   font-family: "TT Lakes";
+  font-size: 14px;
 }
 
 .text {
@@ -118,9 +125,16 @@ html {
 .text--bold {
   font-weight: 600;
 }
+.text--bolder {
+  font-weight: bold;
+}
 .text--md {
-  font-size: 1.15em;
-  line-height: 1.2em;
+  font-size: 16px;
+  line-height: 24px;
+}
+.text--lg {
+  font-size: 24px;
+  line-height: 32px;
 }
 
 h1 {
@@ -175,6 +189,12 @@ h3 {
 .button__icon--repair {
   background-image: url(../assets/svg/repair.svg);
 }
+.button__icon--cross {
+  background-image: url(../assets/svg/cross.svg);
+}
+.button__icon--search {
+  background-image: url(../assets/svg/search.svg);
+}
 .button:focus-visible {
   outline: 2px solid black;
 }
@@ -186,7 +206,7 @@ h3 {
   background-color: #ff719c;
 }
 .button--hover-text:hover {
-  transition: color 0.15s;
+  transition: filter 0.15s;
   filter: opacity(70%);
   background-color: initial;
 }
@@ -248,9 +268,6 @@ h3 {
     margin-left: 20px;
   }
   .header__user-menu {
-    display: flex;
-    -moz-column-gap: 16px;
-         column-gap: 16px;
     margin-right: 20px;
   }
   .header__quick-menu {
@@ -428,6 +445,136 @@ h3 {
     padding: 0 32px;
   }
 }
+body:has(.side-menu--show) {
+  overflow: hidden;
+  height: 100vh;
+}
+
+body:has(.side-menu__button:active) .side-menu {
+  transform: none;
+}
+body:has(.side-menu__button:active) .side-menu__backdrop {
+  width: 200vw;
+  height: 100vh;
+  opacity: 0.8;
+}
+
+.side-menu {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: transform 0.2s linear;
+}
+.side-menu__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: #F8F8F8;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+.side-menu__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 100%;
+  padding: 18px 24px 32px;
+  background-color: #FFFFFF;
+  overflow-y: scroll;
+  overscroll-behavior: none;
+  box-shadow: 0 0 20px 0 #7E7E82;
+  z-index: 1;
+}
+.side-menu--show {
+  transform: none;
+}
+.side-menu--show .side-menu__backdrop {
+  width: 200vw;
+  height: 100vh;
+  opacity: 0.8;
+}
+.side-menu__button:active .menu__target {
+  transform: none;
+}
+.side-menu__header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.side-menu__logo {
+  margin-left: 16px;
+  margin-right: auto;
+}
+.side-menu__links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: auto;
+}
+.side-menu__links-item {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  color: #1B1C21;
+}
+.side-menu__links-item--current {
+  position: relative;
+  color: #7E7E82;
+}
+.side-menu__links-item--current::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -24px;
+  height: 100%;
+  border: 2px solid #41F6D7;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.side-menu__links-item:hover {
+  color: #7E7E82;
+}
+.side-menu__user-menu {
+  width: 100%;
+  margin-top: 32px;
+}
+.side-menu__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+.side-menu__lang-list {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.side-menu__lang-item--current {
+  filter: opacity(60%);
+}
+
+@media screen and (min-width: 767px) {
+  .side-menu__header {
+    margin-bottom: 32px;
+  }
+  .side-menu__links__list {
+    gap: 32px;
+  }
+  .side-menu__lang-list {
+    margin-top: 32px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 360px) {
+  .side-menu {
+    width: 100vw;
+  }
+}
 .user-menu {
   display: flex;
   -moz-column-gap: 16px;
@@ -441,7 +588,6 @@ h3 {
 
 html {
   box-sizing: border-box;
-  font-size: 14px;
 }
 
 *, *:before, *:after {

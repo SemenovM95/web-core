@@ -11,9 +11,91 @@
 <body class="page">
     <header class="header --desktop-hidden">
         <nav class="header__menu menu">
-            <button class="menu__button button button--hover-bg" type="button" aria-label="Открыть меню">
+            <button class="side-menu__button button button--hover-bg" type="button" aria-label="Открыть меню">
                 <span class="button__icon button__icon--menu"></span>
             </button>
+            <section class="header__side-menu side-menu side-menu--show menu__target">
+                <div class="side-menu__backdrop"></div>
+                <div class="side-menu__content">
+                    <div class="side-menu__header">
+                        <button class="side-menu__button button button--hover-bg" type="button" aria-label="Открыть меню">
+                            <span class="button__icon button__icon--cross"></span>        
+                        </button>
+                        <a href="#" class="side-menu__logo link header__link--logo">
+                            <img src="./public/assets/svg/main-logo.svg" alt="CPS Сервис" class="link__logo">
+                        </a>
+                        <button class="side-menu__button button button--hover-bg" type="button" aria-label="Открыть меню">
+                            <span class="button__icon button__icon--search"></span>        
+                        </button>
+                    </div>
+                    <ul class="side-menu__links-list text text--md">
+                        <li class="side-menu__links-item">
+                            <a href="#" class="side-menu__link link">Ремонт техники</a>
+                        </li>
+                        <li class="side-menu__links-item side-menu__links-item--current">
+                            <a href="#" class="side-menu__link link">Услуги и сервисы</a>
+                        </li>
+                        <li class="side-menu__links-item">
+                            <a href="#" class="side-menu__link link">Корпоративным клиентам</a>
+                        </li>
+                        <li class="side-menu__links-item">
+                            <a href="#" class="side-menu__link link">Продавцам техники</a>
+                        </li>
+                        <li class="side-menu__links-item">
+                            <a href="#" class="side-menu__link link">Партнерам</a>
+                        </li>
+                        <li class="side-menu__links-item">
+                            <a href="#" class="side-menu__link link">Производителям</a>
+                        </li>
+                        <li class="side-menu__links-item">
+                            <a href="#" class="side-menu__link link">Наши сервисные центры</a>
+                        </li>
+                        <li class="side-menu__links-item">
+                            <a href="#" class="side-menu__link link">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="side-menu__user-menu user-menu">
+                        <li class="user-menu__item">
+                            <button class="user-menu__button button button--hover-bg" type="button" aria-label="Заказать звонок">
+                                <span class="button__icon button__icon--phone"></span>
+                            </button>
+                        </li>
+                        <li class="user-menu__item">
+                            <button class="user-menu__button button button--hover-bg" type="button" aria-label="Написать нам в чате">
+                                <span class="button__icon button__icon--chat"></span>
+                            </button>
+                        </li>
+                        <li class="user-menu__item">
+                            <button class="user-menu__button button button--hover-bg" type="button" aria-label="Личный кабинет">
+                                <span class="button button__icon button__icon--profile"></span>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="side-menu__footer">
+                        <div class="side-menu__contacts">
+                            <p class="side-menu__contacts-email text text--md">mail@cps.com</p>
+                            <p class="side-menu__contacts-phone text text--lg text--bolder">8 800 890 8900</p>
+                        </div>
+                        <ul class="side-menu__lang-list">
+                            <li class="side-menu__lang-item side-menu__lang-item--current">
+                                <button class="side-menu__lang-button button button--hover-text" type="button">
+                                    RU
+                                </button>
+                            </li>
+                            <li class="side-menu__lang-item">
+                                <button class="side-menu__lang-button button button--hover-text" type="button">
+                                    EN
+                                </button>
+                            </li>
+                            <li class="side-menu__lang-item">
+                                <button class="side-menu__lang-button button button--hover-text" type="button">
+                                    CH
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </nav>
         <div class="header__divider divider --mobile-hidden"></div>
         <a href="#" class="header__link link header__link--logo">

@@ -19,6 +19,8 @@
         &--phone{background-image: url(../assets/svg/phone.svg);}
         &--profile{background-image: url(../assets/svg/profile.svg);}
         &--repair{background-image: url(../assets/svg/repair.svg);}
+        &--cross{background-image: url(../assets/svg/cross.svg);}
+        &--search{background-image: url(../assets/svg/search.svg);}
     }
     &:focus-visible {
         outline: 2px solid black;
@@ -34,7 +36,7 @@
     }
     &--hover-text {
         &:hover{
-            transition: color 0.15s;
+            transition: filter 0.15s;
             filter: opacity(70%);
             background-color: initial;
         }
