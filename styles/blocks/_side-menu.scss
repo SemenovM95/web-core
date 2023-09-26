@@ -1,17 +1,17 @@
-// Временный костыль для отключения скролла при открытом меню
-body:has(.side-menu--show) {
-    overflow: hidden;
-    height: 100vh;  
-}
-// Временный костыль для отображения меню при нажатии на кнопку (анимацию оценить, наверное=))
-body:has(.side-menu__button:active) .side-menu{
-    transform: none;  
-    &__backdrop {
-        width: 200vw;
-        height: 100vh;
-        opacity: 0.8;
-    }
-}
+// // Временный костыль для отключения скролла при открытом меню
+// body:has(.side-menu--show) {
+//     overflow: hidden;
+//     height: 100vh;  
+// }
+// // Временный костыль для отображения меню при нажатии на кнопку (анимацию оценить, наверное=))
+// body:has(.side-menu__button:active) .side-menu{
+//     transform: none;  
+//     &__backdrop {
+//         width: 200vw;
+//         height: 100vh;
+//         opacity: 0.8;
+//     }
+// }
 .side-menu {
     height: 100vh;
     position: absolute;
@@ -23,7 +23,7 @@ body:has(.side-menu__button:active) .side-menu{
     &__backdrop {
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
         width: 0;
         height: 0;
         background-color: $colorBackgroundMain;
@@ -43,20 +43,20 @@ body:has(.side-menu__button:active) .side-menu{
         box-shadow: 0 0 20px 0 $colorTextGray;
         z-index: 1;
     }
-    &--show {
+    &--open {
         transform: none;
         & .side-menu__backdrop {
-            width: 200vw;
+            width: 100vw;
             height: 100vh;
             opacity: 0.8;
         }
     }
     &__button {
-        &:active {
-            & .menu__target {
-                transform: none;
-            }
-        }
+        // &:active {
+        //     & .menu__target {
+        //         transform: none;
+        //     }
+        // }
     }
     &__header {
         display: flex;

@@ -1,0 +1,82 @@
+.card-section {
+    padding-top: 16px;
+    padding-bottom: 38px;
+    &__heading {
+       padding: 16px 16px;
+       border-top: 1px solid $colorAccentBorder;
+       background-image: linear-gradient(to right, transparent, $colorWhite); 
+    }
+    &__slider {
+        margin: 16px 0;
+        &-wrapper {
+            
+        }
+    }
+    &__list-wrapper {
+        margin: 24px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: hidden;
+        gap: 16px 24px;
+        max-height: max-content;
+        height: 160px;
+        box-sizing: content-box;
+        transition: height .2s linear;
+    }
+    &__item {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        width: 240px;
+        height: 72px;
+        padding: 16px 16px;
+        border: 1px solid $colorDivider;
+        border-radius: 6px;
+        background-color: $colorWhite;
+        &>img {
+            margin-right: auto;
+        }
+    }
+    &__link {
+        line-height: 0;
+    }
+}
+
+@media screen and (min-width: $widthTablet) {
+    .card-section {
+        &__heading {
+            padding: 16px 24px;
+        }
+        &__list-wrapper {
+            margin: 24px 24px;
+        }
+        &__list {
+            justify-content: center;
+            gap: 16px 24px;
+        }
+        &__item {
+            width: 224px;
+        }
+    }
+}
+
+@media screen and (min-width: $widthDesktop) {
+    .card-section {
+        &__heading {
+            padding: 16px 32px;
+        }
+        &__list-wrapper {
+            margin: 24px 32px;
+        }
+        &__list {
+            justify-content: space-between;
+            gap: 16px 32px;
+        }
+        &__item {
+            width: 240px;
+        }
+    }
+}
+    

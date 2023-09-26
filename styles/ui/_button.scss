@@ -1,0 +1,46 @@
+.button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    // Button icon element
+    &__icon{
+
+    }
+    &:focus-visible {
+        outline: 2px solid black;
+    }
+    &:active {
+        outline: none;
+    }
+    &--hover-bg {
+        &:hover > span {
+            transition: background-color 0.15s;
+            background-color: lighten($color: $colorButtonMain, $amount: 10%);
+        }
+    }
+    &--hover-text {
+        &:hover{
+            transition: filter 0.15s;
+            filter: opacity(70%);
+            background-color: initial;
+        }
+    }
+    &--expand {
+        position: relative;
+        margin: 16px 0;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        &::before {
+            content: url(../assets/svg/expand.svg);
+            transform: translateY(10%);
+            transition: transform .15s linear;
+        }
+        &--expanded {
+            &::before {
+                transform: rotate(180deg) translateY(10%);
+                transform-origin: 50% 50%;
+            }
+        }
+    }
+}

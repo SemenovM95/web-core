@@ -1,9 +1,11 @@
 @use "/styles/misc/reset.css";
 
+@import "/styles/misc/mixins";
 @import "/styles/misc/colors";
-@import "/styles/misc/_vars.scss";
-@import "/styles/misc/typography.scss";
-@import "/styles/blocks/_blocks.scss";
+@import "/styles/misc/vars";
+@import "/styles/misc/typography";
+@import "/styles/ui/ui";
+@import "/styles/blocks/blocks";
 
 html {
     box-sizing: border-box;
@@ -13,18 +15,16 @@ html {
     box-sizing: inherit;
 }
 
-.visually-hidden {
-    position: absolute!important;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+.no-overflow {
+    height: 100vh;
+    overflow: hidden
 }
 
-@media screen and (max-width: $widthTablet) {
+.visually-hidden {
+    @include visually-hidden;
+}
+
+@media screen and (max-width: calc($widthTablet - 1px)) {
     .--mobile-hidden {
         display: none;
     }
@@ -33,11 +33,22 @@ html {
 @media screen and (min-width: $widthDesktop) {
     .--desktop-hidden {
         display: none;
-    } 
+    }
 }
 
-@media screen and (max-width: $widthDesktop) {
+@media screen and (min-width: $widthTablet) {
+    .--mobile-only {
+        display: none;
+    }
+}
+
+@media screen and (max-width: calc($widthDesktop - 1px)) {
     .--desktop-only {
         display: none;
-    } 
+    }
+}
+
+.--center {
+    padding-left: calc((100vw - $widthDesktop) / 2);
+    padding-right: calc((100vw - $widthDesktop) / 2);
 }

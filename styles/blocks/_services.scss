@@ -21,7 +21,7 @@
     }
     &__quick-menu {
         display: flex;
-        gap: 32px;    
+        gap: 32px;
     }
     &__list {
         position: relative;
@@ -40,28 +40,10 @@
         position: relative;
         // Fade out
         &::before {
-            content: "";
-            position: absolute;
-            display: block;
-            left: 0;
-            top: 0;
-            width: 16px;
-            height: 100%;
-            background-image: 
-            linear-gradient(to right, $colorBackgroundMain, transparent);
-            z-index: 1;
+            @include fadeRight;
         }
         &::after {
-            content: "";
-            position: absolute;
-            display: block;
-            right: 0;
-            top: 0;
-            width: 16px;
-            height: 100%;
-            background-image: 
-            linear-gradient(to left, $colorBackgroundMain, transparent);
-            z-index: 1;
+            @include fadeLeft;
         }
     }
     &__item {

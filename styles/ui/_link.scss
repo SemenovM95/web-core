@@ -1,5 +1,8 @@
 .link {
-    color: inherit; 
+    color: inherit;
+    &__hidden-text {
+        @include visually-hidden;
+    }
     &:visited {
         color: inherit;
     }
