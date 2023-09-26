@@ -505,7 +505,7 @@ h3 {
   padding: 18px 24px 32px;
   background-color: #FFFFFF;
   overflow-y: scroll;
-  overscroll-behavior: none;
+  overscroll-behavior: contain;
   box-shadow: 0 0 20px 0 #7E7E82;
   z-index: 1;
 }

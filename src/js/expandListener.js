@@ -2,7 +2,6 @@ export default function expandListener(triggerSelector, expandableSelector) {
     
     const triggerElement = document.querySelector(triggerSelector);
     const expandableElement = document.querySelector(expandableSelector);
-    console.log({expandableElement});
     
     if(!triggerElement || !expandableElement) return
     
