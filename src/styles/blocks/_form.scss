@@ -1,0 +1,42 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    &__input {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 8px;
+        border: 1px solid #EAEAEA;
+        margin-bottom: 16px;
+        &:hover {
+            outline: 1px solid $colorButtonMain;
+        }
+        &:focus {
+            outline: 2px solid $colorButtonMain;
+        }
+    }
+    &__textarea {
+        height: 120px;
+        resize: none;
+    }
+    &__confidency {
+        color: $colorTextGray;
+        margin-bottom: 24px;
+        &-link {
+            // TODO: избавиться от импортанта
+            color: $colorButtonMain !important;
+        }
+    }
+    &__button {
+        padding: 10px 24px;
+        border-radius: 24px;
+        color: $colorWhite;
+        background-color: $colorButtonMain;
+        font-weight: 600;
+        text-transform: uppercase;
+        align-self: self-end;
+        & .icon {
+          width: 20px;
+          height: 20px;
+        }
+    }
+}

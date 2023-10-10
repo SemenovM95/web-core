@@ -1,0 +1,102 @@
+.sidebar-right {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    transition: z-index .05s linear;
+    display: flex;
+    justify-content: right;
+    overflow: hidden;
+    @media (min-width: $widthDesktop) {
+        transition: z-index .2s linear;
+    }
+    &--open {
+        z-index: $zIndexSidebarRight;
+        & .sidebar-right__backdrop {
+            opacity: 0.96;
+            width: 100%;
+        }
+        & .sidebar-right__content {
+            // min-width: 100vw;
+            transform: none;
+            box-shadow: 0 0 20px 0 $colorTextGray;
+            @media (min-width: 440px) {
+                min-width: 440px;
+            }
+            @media (min-width: $widthTablet) {
+                min-width: 440px;
+            }
+        }
+        & .sidebar-right__close-button {
+            @media (min-width: $widthTablet) {
+                transform: translateX(-96px);
+            }
+        }
+    }
+    &__backdrop {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        background-color: $colorWhite;
+        opacity: 0;
+        transition: opacity .15s linear;
+        cursor: pointer;
+    }
+    &__close-button {
+        position: relative;
+        height: max-content;
+        width: max-content;
+        @media (min-width: $widthTablet) {
+            position: absolute;
+            height: max-content;
+        }
+    }
+    &__heading {
+        position: relative;
+        margin-top: 32px;
+        &::before {
+            @include highlight;
+            left: -16px;
+        }
+        @media (min-width: $widthTablet) {
+            position: relative;
+            margin-top: 0;
+            &::before {
+                left: -32px;
+            }
+        }
+    }
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: min(100vw, 440px);
+        max-width: 440px;
+        min-height: 100vh;
+        padding: 24px 16px;
+        background-color: $colorWhite;
+        overflow: auto;
+        overscroll-behavior: contain;
+        z-index: 2;
+        transform: translateX(100%);
+        transition: transform .15s linear;
+        @media (min-width: $widthMobile) and (max-width: $widthMobileXL) {
+            min-width: 100vw;
+        }
+        @media (max-width: $widthTablet) {
+            min-width: 100vw;
+        }
+        @media (min-width: $widthTablet) {
+            overflow: visible;
+            padding: 32px;
+        }
+    }
+    &__form {
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+}

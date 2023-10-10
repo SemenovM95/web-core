@@ -1,14 +1,10 @@
-export default function sidebarListener(openerSelector, closerSelector, targetSelector, openPrefix) {
+export default function sidebarListener(openerSelector, closerSelector, targetSelector, openClass) {
     
-    const triggerElementOpen = document.querySelector(openerSelector);
-    const triggerElementClose = document.querySelector(closerSelector);
+    const triggerElementOpen = document.querySelectorAll(openerSelector);
+    const triggerElementClose = document.querySelectorAll(closerSelector);
     const targetElement = document.querySelector(targetSelector);
 
     if(!triggerElementOpen || !triggerElementClose || !targetElement) return
-
-    const targetClass = targetSelector.replaceAll('#', '');
-
-    const openClass = openPrefix ? `${targetClass}--${openPrefix}` : `${targetClass}--open`;
 
     const open = () => {
         targetElement.classList.add(openClass);
@@ -19,6 +15,6 @@ export default function sidebarListener(openerSelector, closerSelector, targetSe
         document.body.classList.remove('no-overflow');
     }
 
-    triggerElementOpen.addEventListener('click', open);
-    triggerElementClose.addEventListener('click', close);
+    triggerElementOpen.forEach(el => el.addEventListener('click', open));
+    triggerElementClose.forEach(el => el.addEventListener('click', close));
 }

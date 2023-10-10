@@ -1,0 +1,36 @@
+.price-details {
+    flex-basis: 100%;
+    &__service {
+        color: $colorTextGray;
+        font-weight: 500;
+        @media (min-width: $widthTablet) {
+            display: none;
+        }
+    }
+    &__price {
+        
+    }
+    &__button {
+        padding: 4px 12px;
+    }
+    &:nth-last-child(2), &:nth-last-child(1) {
+        flex: 0 0 40%;
+        @media (min-width: $widthTablet) {
+            flex: unset;
+        }
+    }
+    &:nth-last-child(1) {
+        align-self: flex-end;
+    }
+    &:nth-child(1) {
+        @media (min-width: $widthTablet) {
+            flex: 0 0 50%;
+            
+        }
+    }
+    &:nth-child(3) {
+        @media (min-width: $widthTablet) {
+            flex: 0 0 15%;
+        }
+    }
+}

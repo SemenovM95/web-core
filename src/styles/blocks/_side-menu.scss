@@ -1,0 +1,117 @@
+.side-menu {
+    &__header {
+        display: flex;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    &__logo {
+        margin-left: 16px;
+        margin-right: auto;
+    }
+    &__links {
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: auto;
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            height: 32px;
+            color: $colorTextBlack;
+            &--current {
+                position: relative;
+                color: $colorTextGray;
+                &::before {
+                    @include highlight;
+                    left: -24px;
+                }
+            }
+            &:hover {
+                color: $colorTextGray;
+            }
+        }
+    }
+    &__user-menu {
+        width: 100%;
+        margin-top: 32px;
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 16px;
+        &-phone {
+            font-weight: 600;
+            &:hover {
+              color: lighten($color: $colorTextBlack, $amount: 20%);
+            }
+        }
+        &-email {
+          &:hover {
+            color: lighten($color: $colorTextBlack, $amount: 20%);
+          }
+        }
+    }
+    &__lang {
+        &-list {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        &-item {
+            &--current {
+                filter: opacity(60%);
+            }
+        }
+    }
+
+}
+@media screen and (min-width: $widthTablet) {
+    .side-menu {
+        &__header {
+            margin-bottom: 32px;
+        }
+        &__links {
+            &__list {
+                gap: 32px;
+            }
+        }
+        &__lang {
+            &-list {
+                margin-top: 32px;
+            }
+        }
+    }
+}
+// @media screen and (min-width: $widthMobile) and (max-width: $widthMobileXL) {
+//     .side-menu {
+//         &__content {
+//             width: 100vw;
+//         }
+//     }
+// }
+// @media screen and (min-width: $widthDesktop) {
+//     .side-menu {
+//         &__content {
+//             transform: none;
+//             box-shadow: none;
+//             max-height: 910px;
+//             &::-webkit-scrollbar {
+//                 display: none;
+//             }
+//         }
+//         &--open {
+//             z-index: auto;
+//             transform: none;
+//             & .side-menu__backdrop {
+//                 display: none;
+//             }
+//             & .side-menu__content {
+//                 transform: none;
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,84 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    transition: z-index .2s linear;
+    @media screen and (min-width: $widthDesktop) {
+        position: static;
+        z-index: auto;
+        transform: none;
+        width: max-content;
+        min-height: 100vh;
+        height: unset;
+        border-left: 1px solid $colorAccentBorder;
+        border-right: 1px solid $colorAccentBorder;
+    }
+    &--right {
+        right: 0;
+        left: auto;
+    }
+    &--open {
+        z-index: $zIndexSidebar;
+        & .sidebar__backdrop {
+            opacity: 0.96;
+        }
+        & .sidebar__content {
+            transform: none;
+            box-shadow: 0 0 20px 0 $colorTextGray;
+        }
+        @media screen and (min-width: $widthDesktop) {
+            z-index: auto;
+                transform: none;
+                & .sidebar__backdrop {
+                    display: none;
+                }
+                & .sidebar__content {
+                    transform: none;
+                    box-shadow: none;
+                }
+        }
+    }
+    &__backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: $colorWhite;
+        opacity: 0;
+        transition: opacity .15s linear;
+        cursor: pointer;
+        @media screen and (min-width: $widthDesktop) {
+            display: none;
+        }
+    }
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: $widthMobile;
+        height: 100%;
+        padding: 18px 24px 32px;
+        background-color: $colorWhite;
+        overflow: auto;
+        overscroll-behavior: contain;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: transform .15s linear;
+        @media screen and (min-width: $widthMobile) and (max-width: $widthMobileXL) {
+            width: 100vw;
+        }
+        @media screen and (min-width: $widthDesktop) {
+            transform: none;
+            box-shadow: none;
+            height: 100vh;
+            overflow-y: unset;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}
